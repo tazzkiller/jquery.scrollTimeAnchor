@@ -12,15 +12,23 @@
  * Usage:
  *
  * From JavaScript, use:
+<<<<<<< HEAD
  *
  *		$(document).ready(function(){
  *     $(<select>).scrollTimeAnchor({duration: '<A>', wrapper: '<B>', top: '<C>', easing: '<D>' });
  *		});
  *
+=======
+ *     $(<select>).scrollTimeAnchor({duration: '<A>', wrapper: '<B>', top: '<C>', easing: '<D>' });
+>>>>>>> 0874f13d805e40b5b3898c71bcf9007faf14a7de
  *     where:
  *       <select> is the DOM node selector, e.g. ".scroll"
  *       <A> Duration of total scroll (default = '10000' )
  *       <B> Id of the container for scroll ( Important !! fixed height,  default = '#main' )
  *       <C> Distance to the top for stop scroll (default = '300' )
  *       <D> include plug in easing for easing (default = 'swing' )
+<<<<<<< HEAD
  */
+=======
+ */
+>>>>>>> 0874f13d805e40b5b3898c71bcf9007faf14a7de
