@@ -1,0 +1,22 @@
+/**
+ * scrollTimeAnchor plugin for jQuery
+ * v1.0
+ * Move to anchor with a regular scroll time
+ *
+ * By Tazzkiller, creanet3d.com
+ *
+ * Please use as you wish at your own risk.
+ */
+
+/**
+ * Usage:
+ *
+ * From JavaScript, use:
+ *     $(<select>).scrollTimeAnchor({duration: '<A>', wrapper: '<B>', top: '<C>', easing: '<D>' });
+ *     where:
+ *       <select> is the DOM node selector, e.g. ".scroll"
+ *       <A> Duration of total scroll (default = '10000' )
+ *       <B> Id of the container for scroll ( Important !! fixed height,  default = '#main' )
+ *       <C> Distance to the top for stop scroll (default = '300' )
+ *       <D> include plug in easing for easing (default = 'swing' )
+ */
