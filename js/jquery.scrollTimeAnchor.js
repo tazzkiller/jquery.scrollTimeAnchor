@@ -12,7 +12,11 @@
  * Usage:
  *
  * From JavaScript, use:
+ *
+ *		$(document).ready(function(){
  *     $(<select>).scrollTimeAnchor({duration: '<A>', wrapper: '<B>', top: '<C>', easing: '<D>' });
+ *		});
+ *
  *     where:
  *       <select> is the DOM node selector, e.g. ".scroll"
  *       <A> Duration of total scroll (default = '10000' )
