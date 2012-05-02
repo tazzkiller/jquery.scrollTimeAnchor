@@ -5,10 +5,15 @@
 <title>scrollTimeAnchor</title>
 <link href='http://fonts.googleapis.com/css?family=Averia+Libre' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="./js/jquery.easing.1.3.js"></script>
 <script src="./js/jquery.scrollTimeAnchor.js"></script>
 <script>
 $(document).ready(function(){
-$('.scroll').scrollTimeAnchor({top:150});
+$('.scroll').scrollTimeAnchor({top:250, easing:'easeOutQuad'});
+
+$('ul#navigation').hover( function(){ 
+$('.fade').stop().fadeToggle(500); 
+});
 });
 </script>
 <style>
@@ -18,21 +23,23 @@ background-size: 100%;
 font-family: 'Averia Libre', cursive;
 font-size:24px;
 color:#FFF;
+overflow-y:hidden;
 }
 
 ul#navigation  {
 position:fixed;
-top:0px;
-left:10px;
-text-align:left;
-text-shadow: 3px 1px 3px #1f1f1f;
-filter: dropshadow(color=#1f1f1f, offx=3, offy=1);
+width:600px;
+top:50px;
+left:50%;
+margin-left:-300px;
+text-align:center;
 list-style-type:none;
+z-index:2;
 }
 
 ul#navigation li  {
-margin-right:15px;
-text-align:left;
+padding:0px 0px 0px 0px;
+text-align:center;
 }
 
 ul#navigation li a {
@@ -52,13 +59,16 @@ left:50%;
 padding:20px;
 margin-left:-325px;
 text-align:justify;
-text-shadow: 3px 1px 3px #1f1f1f;
-filter: dropshadow(color=#1f1f1f, offx=3, offy=1);
 }
 
 .demo a {
 color:#FFF;
 text-decoration:none;
+}
+
+.fade {
+margin-top:-190px;
+display:none;
 }
 
 
@@ -69,16 +79,19 @@ text-decoration:none;
 
 	<div id="main" style="height:15000px;">
 			<ul id="navigation">
-								<li>Click before to test scroll</li>
+								<li><img src="./images/arrow.png" /></li>
+								<div class="fade">
+								<li>Click to test scroll :</li>
 								<li style="display:inline;"><a href="#div1" class="scroll">#1</a></li>
 								<li style="display:inline;"><a href="#div2" class="scroll">#2</a></li>
 								<li style="display:inline;"><a href="#div3" class="scroll">#3</a></li>
 								<li style="display:inline;"><a href="#div4" class="scroll">#4</a></li>
 								<li style="display:inline;"><a href="#div5" class="scroll">#5</a></li>
 								<li style="display:inline;"><a href="#div6" class="scroll">#6</a></li>
+								</div>
 							</ul>
 		
-<div style="top:150px;" id="div1" class="demo">
+<div style="top:250px;" id="div1" class="demo">
 <a href="#div2"  class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut semper sem. Aliquam ac nunc nibh. In at massa odio. Aliquam ultrices ullamcorper risus, ut varius mi suscipit at. Nunc imperdiet nibh sit amet purus aliquam lobortis. Curabitur nulla dolor, ornare sit amet placerat quis, dictum a arcu. Curabitur metus magna, pretium ac facilisis ut, porttitor nec lectus. Integer magna urna, placerat at suscipit et, faucibus vitae leo. Maecenas interdum imperdiet varius. Phasellus condimentum dignissim tortor, eu iaculis lorem scelerisque non. </a>
 </div>
 
