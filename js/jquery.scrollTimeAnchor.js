@@ -32,8 +32,8 @@
 		params = $.extend( {duration: '10000', wrapper: '#main', top: '300', easing: 'swing' }, params);
 
 		this.click(function() {
-		var $t = $(this);
-	   var elementClicked = $t.attr("href");
+	   var $obj = $(this);
+	   var elementClicked = $obj.attr("href");
 	   var elementCourant = window.pageYOffset;
 	   var winHeight = $(params.wrapper).outerHeight();
 	   var destination = $(elementClicked).offset().top;
@@ -45,9 +45,7 @@
 	   var totalClicked = winHeight - destination;
 	   if ( totalCourant > totalClicked ) { var durationScroll = ((totalCourant - totalClicked) * scrollRatio);} 
 	   else { var durationScroll = ((totalClicked - totalCourant) * scrollRatio);}
-	   $("html,body").animate(
-	   { scrollTop: destination - params.top}, 
-	   {duration: durationScroll,easing:params.easing});
+	   $("html,body").animate({ scrollTop: destination - params.top}, {duration: durationScroll,easing:params.easing});
 	   return false;
 		});
 		return this;
