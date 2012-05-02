@@ -3,39 +3,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>scrollTimeAnchor</title>
-
+<link href='http://fonts.googleapis.com/css?family=Averia+Libre' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="./js/jquery.scrollTimeAnchor.js"></script>
 <script>
 $(document).ready(function(){
-$('.scroll').scrollTimeAnchor();
+$('.scroll').scrollTimeAnchor({top:150});
 });
 </script>
 <style>
 body {
-background:url('./images/background.jpg') center top no-repeat;
+background:url('./images/background.jpg') center top repeat-y;
 background-size: 100%;
-background-attachment:fixed;
+font-family: 'Averia Libre', cursive;
+font-size:24px;
+color:#FFF;
 }
 
 ul#navigation  {
 position:fixed;
 top:0px;
-width:250px;
-text-align:center;
-background:#FFF;
-left:50px;
-z-index:2;
--webkit-border-radius: 30px;
-border-radius: 30px;
--webkit-box-shadow: 15px 5px 25px 5px #CCC;
-box-shadow: 15px 5px 25px 5px #CCC; 
+left:10px;
+text-align:left;
+text-shadow: 3px 1px 3px #1f1f1f;
+filter: dropshadow(color=#1f1f1f, offx=3, offy=1);
+list-style-type:none;
 }
 
 ul#navigation li  {
 margin-right:15px;
-text-align:center;
-display:inline;
+text-align:left;
 }
 
 ul#navigation li a {
@@ -50,19 +47,17 @@ text-decoration:none;
 
 .demo {
 position:absolute;
-width:450px;
+width:650px;
 left:50%;
 padding:20px;
-margin-left:-225px;
-text-align:center;
--webkit-border-radius: 30px;
-border-radius: 30px;
--webkit-box-shadow: 15px 5px 25px 5px #CCC;
-box-shadow: 15px 5px 25px 5px #CCC; 
+margin-left:-325px;
+text-align:justify;
+text-shadow: 3px 1px 3px #1f1f1f;
+filter: dropshadow(color=#1f1f1f, offx=3, offy=1);
 }
 
 .demo a {
-color:#000;
+color:#FFF;
 text-decoration:none;
 }
 
@@ -74,35 +69,36 @@ text-decoration:none;
 
 	<div id="main" style="height:15000px;">
 			<ul id="navigation">
-								<li><a href="#div1" class="scroll">#1</a></li>
-								<li><a href="#div2" class="scroll">#2</a></li>
-								<li><a href="#div3" class="scroll">#3</a></li>
-								<li><a href="#div4" class="scroll">#4</a></li>
-								<li><a href="#div5" class="scroll">#5</a></li>
-								<li><a href="#div6" class="scroll">#6</a></li>
+								<li>Click before to test scroll</li>
+								<li style="display:inline;"><a href="#div1" class="scroll">#1</a></li>
+								<li style="display:inline;"><a href="#div2" class="scroll">#2</a></li>
+								<li style="display:inline;"><a href="#div3" class="scroll">#3</a></li>
+								<li style="display:inline;"><a href="#div4" class="scroll">#4</a></li>
+								<li style="display:inline;"><a href="#div5" class="scroll">#5</a></li>
+								<li style="display:inline;"><a href="#div6" class="scroll">#6</a></li>
 							</ul>
 		
-<div style="position:absolute;top: 300px;" id="div1" class="demo">
+<div style="top:150px;" id="div1" class="demo">
 <a href="#div2"  class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut semper sem. Aliquam ac nunc nibh. In at massa odio. Aliquam ultrices ullamcorper risus, ut varius mi suscipit at. Nunc imperdiet nibh sit amet purus aliquam lobortis. Curabitur nulla dolor, ornare sit amet placerat quis, dictum a arcu. Curabitur metus magna, pretium ac facilisis ut, porttitor nec lectus. Integer magna urna, placerat at suscipit et, faucibus vitae leo. Maecenas interdum imperdiet varius. Phasellus condimentum dignissim tortor, eu iaculis lorem scelerisque non. </a>
 </div>
 
-<div style="position:absolute;top: 1800px;" id="div2" class="demo" >
+<div style="top:1800px;" id="div2" class="demo" >
 <a href="#div3"  class="scroll">Vestibulum malesuada fringilla dolor, vel sagittis diam ultrices eu. Quisque ut laoreet est. Nullam nec felis mi. Phasellus a velit felis. Aenean condimentum, arcu ac tristique fringilla, turpis velit tempor elit, vel condimentum odio nisi eget turpis. Aenean nec felis felis. Morbi sed neque ligula. Nunc cursus nunc vitae diam pharetra sit amet condimentum nisi viverra. In ornare facilisis pretium. Praesent vel enim ac felis commodo semper ac a. </a>
 </div>
 
-<div style="position:absolute;top: 4600px;" id="div3" class="demo">
+<div style="top:4600px;" id="div3" class="demo">
 <a href="#div4"  class="scroll">Donec congue eros sit amet ipsum vehicula quis commodo nibh rhoncus. Donec in turpis vitae lectus tempor luctus. Integer pharetra orci non odio luctus laoreet. Integer cursus tortor vitae risus imperdiet pulvinar. Duis mollis, sapien et sagittis adipiscing, quam nisl interdum purus, a fermentum. </a>
 </div>
 
-<div style="position:absolute;top: 7000px;" id="div4" class="demo">
+<div style="top:7000px;" id="div4" class="demo">
 <a href="#div5"  class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id diam dolor. Mauris venenatis dui sagittis urna molestie elementum. Nunc fringilla, tellus quis hendrerit vehicula, nisl magna scelerisque tellus, id rhoncus ligula nibh quis diam. Sed a lorem diam, ut accumsan ligula. Integer at odio eu diam mattis iaculis sed sed lorem. Donec sed vestibulum arcu. Donec vitae turpis libero. Proin auctor imperdiet egestas. Donec eget cursus felis. Vivamus eget leo libero, non imperdiet orci. Curabitur urna ante, fermentum at vulputate non, pellentesque a orci. Nullam aliquet diam ac sem lacinia vehicula. Maecenas adipiscing malesuada blandit. Morbi egestas interdum risus, mollis interdum nibh hendrerit sit amet. </a>
 </div>
 
-<div style="position:absolute;top: 10000px;" id="div5" class="demo">
+<div style="top:10000px;" id="div5" class="demo">
 <a href="#div6"  class="scroll">Aliquam fringilla lobortis convallis. Nunc ultricies pretium suscipit. Vestibulum condimentum facilisis ipsum, quis lacinia felis eleifend dictum. Nunc ultrices enim id urna viverra quis suscipit metus tincidunt. Nunc non velit. </a>
 </div>
 
-<div style="position:absolute;top: 14000px;" id="div6" class="demo">
+<div style="top:14000px;" id="div6" class="demo">
 <a href="#div1"  class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum nulla a sem suscipit id pretium dui feugiat. Donec sollicitudin cursus volutpat. Aliquam in mi at justo accumsan imperdiet sed at dolor. Nulla facilisi. Morbi laoreet porta sapien tempus gravida. Vivamus non mauris velit, eget varius dolor. Etiam volutpat, felis eu sodales aliquam, felis mi luctus nisl, id mollis massa mi nec lacus. Ut mattis lectus vel ipsum laoreet eget pharetra est bibendum. In molestie sapien non metus interdum dictum. Cras et suscipit dolor. Sed enim metus, mollis at aliquet sit amet, elementum et tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu malesuada risus.</a>
 </div>
 	</div>
